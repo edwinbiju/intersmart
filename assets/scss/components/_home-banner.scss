@@ -2,7 +2,10 @@
 @import "../utils/mixins";
 
 .home-banner {
+     background: transparent linear-gradient(270deg, #47CF82 0%, #034D85 100%) 0% 0% no-repeat padding-box;
+
      &-item {
+          overflow: hidden;
           &Content {
                max-width: 700px;
                margin: auto;
@@ -12,6 +15,7 @@
                width: 90%;
                transform: translatex(-50%);
                color: #FFFFFF;
+
                @include max(992) {
                     bottom: 100px;
                }
@@ -54,6 +58,9 @@
           figure {
                height: calc(100vh - 250px);
                min-height: 500px;
+               img{
+                    transform: scale(1.5);
+               }
           }
      }
 
@@ -178,6 +185,13 @@
                     opacity: 1;
                     -webkit-transform: none;
                     transform: none;
+                    
+               }
+          }
+          figure{
+               img{
+                    transform: scale(1);
+                    transition:  1s cubic-bezier(.165,.84,.44,1);
                }
           }
 
