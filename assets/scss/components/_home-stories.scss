@@ -36,6 +36,10 @@
           .para {
                line-height: 2;
                color: #515151;
+               @include max(992) {
+                    line-height: 1.7;
+                    font-size: 15px;  
+               }
           }
 
           .btn {

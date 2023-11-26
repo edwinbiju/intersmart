@@ -20,7 +20,7 @@ var swiper = new Swiper(".mySwiper", {
 // Our Holiday Packages Slider
 var swiper1 = new Swiper(".swiper-container-newlimited", {
   // loop: true,
-  slidesPerView: 1.1,
+  slidesPerView: 1.3,
   spaceBetween: 15,
 
   navigation: {
@@ -53,7 +53,7 @@ var swiper1 = new Swiper(".swiper-container-newlimited", {
 // Testimonial  Slider
 var swiper2 = new Swiper(".swiper-container-testimonial", {
   // loop: true,
-  slidesPerView: 1,
+  slidesPerView: 1.2,
   spaceBetween: 15,
 
  

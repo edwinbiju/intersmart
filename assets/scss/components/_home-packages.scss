@@ -24,6 +24,9 @@
 
 .care-begin-slides {
 	padding: 0 50px 0 25px;
+	@include max(576) {
+		padding: 0 15px 0 15px;
+	}
 
 	.slider {
 		padding-right: 50px;
