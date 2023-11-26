@@ -1,0 +1,76 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+.home-traveltip {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    span {
+        background: #5EBF88;
+        border-radius: 5px;
+        margin-bottom: 21px;
+        display: inline-block;
+        padding: 3px 19px;
+        text-transform: uppercase;
+        font-size: size(18);
+
+        @include max(992) {
+            font-size: size(14);
+        }
+    }
+
+    .title {
+        font-size: size(45);
+        line-height: 1.2;
+        font-family: auto;
+        max-width: 460px;
+        font-weight: 400;
+        margin-bottom: 25px;
+
+        @include max(992) {
+            font-size: size(30);
+        }
+    }
+
+    p {
+        font-size: size(18);
+        line-height: 1.66;
+        max-width: 607px;
+
+        @include max(992) {
+            font-size: size(16);
+        }
+    }
+
+    .bg-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.4);
+        }
+
+        &.visible {
+            img {
+                transform: scale(1);
+                transition: 2s cubic-bezier(.165, .84, .44, 1);
+            }
+        }
+    }
+
+    .wraper {
+        padding: 113px 0 178px;
+
+        @include max(992) {
+            padding: 60px 0;
+        }
+    }
+
+
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="Group_276" data-name="Group 276" transform="translate(-1609 -5844.334)">
+    <g id="youtube" transform="translate(1621.285 5782.746)">
+      <path id="Path_145" data-name="Path 145" d="M16.98,91.494H4.161A4.165,4.165,0,0,1,0,87.333V80.847a4.165,4.165,0,0,1,4.161-4.161H16.98a4.165,4.165,0,0,1,4.161,4.161v6.486A4.165,4.165,0,0,1,16.98,91.494ZM4.161,77.925a2.925,2.925,0,0,0-2.922,2.922v6.486a2.925,2.925,0,0,0,2.922,2.922H16.98A2.925,2.925,0,0,0,19.9,87.333V80.847a2.925,2.925,0,0,0-2.922-2.922Z" fill="#fff"/>
+    </g>
+    <g id="Ellipse_15" data-name="Ellipse 15" transform="translate(1609 5844.334)" fill="none" stroke="#fff" stroke-width="1" opacity="0.4">
+      <circle cx="22.5" cy="22.5" r="22.5" stroke="none"/>
+      <circle cx="22.5" cy="22.5" r="22" fill="none"/>
+    </g>
+    <path id="Path_146" data-name="Path 146" d="M191.916,166a.619.619,0,0,1-.619-.619v-6.775a.619.619,0,0,1,.949-.524l5.459,3.432a.619.619,0,0,1-.006,1.053l-5.459,3.342a.62.62,0,0,1-.323.091Zm.619-6.273v4.548l3.665-2.244Z" transform="translate(1437.887 5704.799)" fill="#fff"/>
+  </g>
+</svg>

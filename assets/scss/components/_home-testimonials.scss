@@ -1,0 +1,97 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+.home-testimonials {
+	position: relative;
+	background: #F2FFF8;
+	padding: size(77) 0 size(128);
+
+	@include max(992) {
+		padding: size(50) 0 size(60);
+	}
+
+}
+
+.testimon-wrap {
+	background: #FFFFFF;
+	border-radius: 15px;
+	padding: 68px 38px;
+	box-shadow: 0px 50px 50px #01305414;
+
+	@include max(768) {
+		padding: 30px 18px;
+	}
+
+	.leftwrap {
+		flex: 0 0 196px;
+		position: relative;
+
+		.authorimg {
+			@include aspectRatio(196, 211);
+			width: 100%;
+
+			@include max(768) {
+				@include aspectRatio(200, 160);
+			}
+
+			&::before {
+				position: absolute;
+				content: "";
+				background-image: url(../../images/quote.svg);
+				height: 70px;
+				width: 70px;
+				background-size: contain;
+				background-repeat: no-repeat;
+				bottom: -35px;
+				left: 50%;
+				transform: translateX(-50%);
+				-webkit-transition: 0.3s ease-in-out;
+				transition: 0.3s ease-in-out;
+				z-index: 1;
+
+				@include max(992) {
+					height: 40px;
+					width: 40px;
+					bottom: -20px;
+				}
+			}
+		}
+
+
+
+
+
+	}
+
+	.rightwrap {
+		padding-left: 40px;
+
+		@include max(768) {
+			padding-left: 0px;
+			padding-top: 50px;
+		}
+
+		p {
+			font-style: italic;
+			color: #3A3A3A;
+		}
+
+		.author {
+			font-family: auto;
+			font-weight: 400;
+			color: #0768B3;
+			font-size: 20px;
+			text-transform: uppercase;
+			@include max(992) {
+				font-size: 18px;
+			}
+		}
+
+		span {
+			font-size: 14px;
+			color: #3C5359;
+		}
+	}
+
+}

@@ -1,0 +1,54 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+.home-happytravel {
+    background: transparent linear-gradient(263deg, #47CF82 0%, #299683 44%, #034D85 100%);
+    padding: 93px 0 92px;
+    @include max(992) {
+        padding: 50px 0  0;
+    }
+}
+
+.boxwraphappy {
+    display: flex;
+    @include max(992) {
+           display: block;
+        }
+    figure {
+        height: 50px;
+        flex: 0 0  50px;
+        @include max(768) {
+            height: 40px;
+            flex: 0 0  40px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+    .contwrap{
+        @include max(992) {
+            text-align: center;
+        }
+    }
+
+    .para {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 1.2;
+        @include max(1600) {
+            font-size: 16px ;
+        }
+    }
+
+    .ttl {
+        font-size: 30px;
+        @include max(1600) {
+            font-size: 24px ;
+        }
+    }
+}

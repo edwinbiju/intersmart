@@ -1,0 +1,69 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.home-contentarea {
+     background: #F2FFF8;
+     padding: 72px 0 103px;
+     @include max(992) {
+          padding: 40px 0 ;
+     }
+
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
+          font-size: 18px;
+          margin-bottom: 20px;
+          color: #0768B3;
+          line-height: 1.4;
+
+          ~h1,
+          ~h2,
+          ~h3,
+          ~h4,
+          ~h5,
+          ~h6 {
+               margin-top: 34px;
+          }
+     }
+
+     p {
+          margin-bottom: 23px;
+          font-size: 14px;
+     }
+
+     .morelink {
+          color: #5EBF88;
+          font-size: 16px;
+          position: relative;
+          cursor: pointer;
+
+          &::after {
+               content: "";
+               position: absolute;
+               border: 6px solid transparent;
+               border-top: 7px solid #5EBF88;
+               right: 0px;
+               bottom: 0;
+               pointer-events: none;
+          }
+     }
+
+     .contentbox {
+          .extracontent {
+               display: none;
+          }
+
+          &.show {
+               .morelink {
+                    display: none;
+               }
+
+               .extracontent {
+                    display: block;
+               }
+          }
+     }
+}

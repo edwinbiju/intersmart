@@ -1,0 +1,185 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.home-banner {
+     &-item {
+          &Content {
+               max-width: 700px;
+               margin: auto;
+               position: absolute;
+               left: 50%;
+               bottom: 180px;
+               width: 90%;
+               transform: translatex(-50%);
+               color: #FFFFFF;
+               @include max(992) {
+                    bottom: 100px;
+               }
+
+               h2 {
+                    font-size: size(70);
+                    line-height: 1;
+                    margin-bottom: size(2);
+                    font-family: auto;
+                    font-weight: 400;
+
+                    @include max(991.98) {
+                         font-size: size(40);
+                    }
+               }
+
+               p {
+                    font-size: size(22);
+                    @include lineHeight(22, 30);
+
+                    @include max(991.98) {
+                         font-size: size(16);
+                    }
+               }
+
+               .anime {
+                    transform: translateY(60px);
+                    opacity: 0;
+                    -webkit-transition: opacity 0.9s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
+               }
+
+          }
+
+          img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+          }
+
+          figure {
+               height: calc(100vh - 250px);
+               min-height: 500px;
+          }
+     }
+
+     &-sub {
+
+          // padding: size(32) 0;
+          @include max(991.98) {
+               padding: size(32) 0;
+          }
+
+          .wrap {
+               display: flex;
+               flex-wrap: wrap;
+               overflow: hidden;
+               align-items: center;
+               box-shadow: 0px 50px 50px #01305414;
+               border-radius: 15px;
+               margin-top: -60px;
+               z-index: 1;
+               position: relative;
+               background: #fff;
+
+               @include max(991.98) {
+                    margin-top: 0px;
+               }
+
+               .colwrap {
+                    width: 278px;
+                    color: #FFFFFF;
+                    padding: 23px 53px 23px;
+                    background: transparent linear-gradient(246deg, #47CF82 0%, #034D85 100%) 0% 0% no-repeat padding-box;
+
+                    @include max(991.98) {
+                         width: 100%;
+                         padding: 23px;
+                    }
+
+                    .title {
+                         font-size: size(22);
+
+                         @include max(991.98) {
+                              font-size: size(18);
+                         }
+                    }
+
+                    .subtitle {
+                         font-size: size(35);
+
+                         @include max(991.98) {
+                              font-size: size(24);
+                         }
+
+                    }
+               }
+
+               .rightboxwrap {
+                    width: calc(100% - 278px);
+
+                    @include max(991.98) {
+                         width: 100%;
+                    }
+
+                    label {
+                         color: #545661;
+                         font-size: 12px;
+                    }
+               }
+
+               .location {
+                    flex: 0 0 50px;
+                    margin-right: 15px;
+                    text-align: center;
+               }
+
+               .selectbox {
+                    @include max(991.98) {
+                         margin: 20px 0;
+                    }
+               }
+
+               @include min(1200) {
+                    .border-left {
+                         border-left: 1px solid rgba(7, 103, 176, 0.3)
+                    }
+               }
+
+          }
+     }
+
+     .swiper_nextwrap {
+          position: absolute;
+          right: 55px;
+          bottom: 33px;
+          display: flex;
+          align-items: center;
+          z-index: 1;
+          font-size: 30px;
+          color: #5EBF88;
+
+          @include max(1200) {
+               bottom: 60px;
+          }
+
+          @include max(991.98) {
+               right: 20px;
+               bottom: 20px;
+          }
+
+          span {
+
+               font-weight: 300;
+
+               &:nth-last-child(1) {
+                    color: #FFFFFF;
+               }
+          }
+     }
+
+     .swiper-slide-active {
+          .home-banner-itemContent {
+               .anime {
+                    opacity: 1;
+                    -webkit-transform: none;
+                    transform: none;
+               }
+          }
+
+     }
+}

@@ -1,0 +1,143 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+.home-customholidays {
+    position: relative;
+    overflow: hidden;
+    color: #030303;
+
+
+
+
+    .title {
+        font-size: size(36);
+        line-height: 1.2;
+        margin-bottom: 23px;
+       
+
+        @include max(992) {
+            font-size: size(26);
+        }
+    }
+
+    .subttl{
+        font-size: size(20);
+        margin-bottom: 20px;
+
+        @include max(992) {
+            font-size: size(16);
+        }
+    }
+
+    p {
+        font-size: size(16);
+        line-height: 1.8;
+
+        @include max(992) {
+            font-size: size(14);
+        }
+    }
+
+    .right {
+        max-width:492px;
+        background: #fff;
+        border-radius: 5px;
+        padding:  54px 43px 71px;
+        margin-left: auto;
+        @include max(992) {
+            padding:  35px 15px ;
+        }
+    }
+
+    .formwrap{
+        padding: 23px 0 11px ;
+        @include max(992) {
+            padding: 15px 0 0px ;
+        }
+        .form-group{
+            position: relative;
+            .callbtn{
+                position: absolute;
+                top: 14px;
+                left: 14px;
+            }
+            input{
+                padding: 10px  125px  10px 57px;
+                height: 55px;
+                &::placeholder{
+                        color: #545661;
+                }
+            }
+
+            .btn {
+                position: absolute;
+                right: 3px;
+                top: 0px;
+                border-radius: 8px;
+                transform: scale(0.87);
+                transform-origin: right;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .bg-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.4);
+        }
+
+        &.visible {
+            img {
+                transform: scale(1);
+                transition: 2s cubic-bezier(.165, .84, .44, 1);
+            }
+        }
+    }
+
+    .wraper {
+        padding: 105px 0;
+
+        @include max(992) {
+            padding: 50px 0;
+        }
+    }
+
+    .container {
+        z-index: 1;
+    }
+
+    
+
+   
+
+    .wrapperbox {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 10px;
+
+        .box {
+            border: 1px solid #D3E1EC;
+            border-radius: 5px;
+            padding: 9px 36px;
+            @include max(992) {
+                padding: 6px 16px;
+            }
+
+            .ttl {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.2;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,195 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.home-story {
+     padding: size(82) 0;
+     position: relative;
+     overflow: hidden;
+
+     @include max(992) {
+          padding: size(30) 0;
+     }
+
+     .wrapleft {
+          max-width: 650px;
+
+          .title {
+               color: #535353;
+               font-size: 20px;
+
+               @include max(992) {
+                    font-size: 18px;
+               }
+          }
+
+          .subtitle {
+               font-size: 45px;
+               color: #0768B3;
+               font-family: auto;
+               font-weight: 400;
+
+               @include max(992) {
+                    font-size: 28px;
+               }
+          }
+
+          .para {
+               line-height: 2;
+               color: #515151;
+          }
+
+          .btn {
+               font-weight: 400;
+          }
+     }
+
+     .wrapright {
+          max-width: 500px;
+          margin-left: auto;
+          position: relative;
+
+          @include max(992) {
+               margin: auto;
+          }
+
+          figure {
+               -webkit-mask-image: url(../../images/plane_mask.png);
+               mask-image: url(../../images/plane_mask.png);
+               -webkit-mask-repeat: no-repeat;
+               -webkit-mask-size: contain;
+               -webkit-mask-position: center;
+               top: 4px;
+               left: 11.3%;
+               height: 625px;
+               width: 100%;
+
+               @include max(576) {
+                    height: 400px;
+               }
+
+               img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: right;
+                    transform: scale(1.8);
+                    transition: 3s cubic-bezier(.165, .84, .44, 1);
+               }
+          }
+
+          .rightBox {
+               border-radius: 12px;
+               overflow: hidden;
+               display: flex;
+               align-items: center;
+               padding: 24px 22px 23px 29px;
+               box-shadow: 0px 20px 50px #01305433;
+               max-width: 232px;
+               position: absolute;
+
+               @include max(992) {
+                    padding: 20px;
+                    max-width: 200px;
+               }
+
+               &.top {
+                    background: #FFFFFF;
+                    top: 15%;
+                    left: -18%;
+
+                    @include max(992) {
+                         top: 0%;
+                         left: -2%;
+                    }
+
+               }
+
+               &.bottom {
+                    background: #5EBF88;
+                    bottom: 18%;
+                    right: -30px;
+
+                    span,
+                    p {
+                         color: #fff;
+                    }
+
+               }
+
+               span {
+                    font-size: size(39);
+                    font-weight: 700;
+                    color: #5EBF88;
+                    margin-right: 12px;
+                    line-height: 1.38;
+
+                    @include max(992) {
+                         font-size: size(26);
+                    }
+               }
+
+               p {
+                    margin-bottom: 0;
+                    font-size: 19px;
+                    line-height: 1.2;
+
+                    @include max(992) {
+                         font-size: size(16);
+                    }
+               }
+          }
+
+          &.visible {
+               figure {
+                    img {
+                         transform: scale(1);
+                    }
+               }
+          }
+
+     }
+
+     .ballon {
+          position: absolute;
+          z-index: -1;
+
+          @include max(992) {
+               transform: scale(0.7);
+          }
+
+          &.ballon1 {
+               top: 35%;
+               left: -20px;
+               animation: keyanime 7s ease-in-out infinite;
+
+               @include max(992) {
+                    top: 17%;
+                    max-width: 15%;
+               }
+          }
+
+          &.ballon2 {
+               top: 0;
+               right: 0;
+               animation: keyanime 17s ease-in-out infinite;
+          }
+     }
+}
+
+
+@keyframes keyanime {
+     0% {
+          transform: translate(0px);
+     }
+
+
+     50% {
+          transform: translateY(50px);
+
+     }
+
+     100% {
+          transform: translate(0px);
+
+     }
+}

@@ -1,0 +1,131 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.footer {
+     background: transparent linear-gradient(270deg, #47CF82 0%, #034D85 100%);
+
+     &_item {
+          padding: 0 12px;
+
+          ul {
+               li {
+                    margin-bottom: size(2);
+
+                    a {
+                         @include lineHeight(18, 35);
+                         font-size: size(18);
+                         font-weight: 400;
+
+                         @include max(768) {
+                              font-size: 14px;
+                         }
+
+                         &:hover {
+                              color: $primary-color;
+                         }
+                    }
+               }
+          }
+
+
+          a {
+               font-size: size(18);
+
+               @include max(768) {
+                    font-size: 14px;
+               }
+
+               &:hover {
+                    color: $primary-color;
+               }
+          }
+
+
+
+
+     }
+
+     .footmail {
+          p {
+               margin: 0;
+          }
+     }
+
+     .itemSocial {
+          a {
+               transition: 0.4s ease-in-out;
+               display: block;
+
+               &:hover {
+                    transform: scale(0.8);
+               }
+          }
+     }
+     .col-lg-12{
+          @include max(576) {
+               padding: 0;
+          }
+     }
+
+     .contactwrap {
+          display: flex;
+          align-items: flex-start;
+
+          figure {
+               width: 54px;
+               height: 54px;
+               @include max(992) {
+                    width: 48px;
+                    height: 48px;
+               }
+          }
+
+          span {
+               font-size: 14px;
+               font-weight: 300;
+               display: block;
+          }
+
+          a {
+               font-size: 24px;
+               font-weight: 600;
+
+               @include max(1600) {
+                    font-size: 20px;
+               }
+          }
+     }
+
+
+
+     &_bottom {
+          padding: 38px 0;
+          @include max(768) {
+               padding: 10px 0;
+               text-align: center;
+          }
+
+          p,
+          a {
+               font-size: 18px;
+
+               @include max(768) {
+                    font-size: 14px;
+               }
+          }
+     }
+
+     .mobbox {
+          @include max(768) {
+               max-width: 50%;
+          }
+     }
+
+     &_wrapper {
+          padding: size(50) 0 20px;
+
+          @include min(992) {
+               padding: size(116) 0 size(73);
+          }
+     }
+}

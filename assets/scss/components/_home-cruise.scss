@@ -1,0 +1,116 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+.home-cruise {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    
+
+    &:after {
+        position: absolute;
+        content: '';
+        background: transparent linear-gradient(270deg, #47CF82 0%, #034D85 100%);
+        opacity: 0.85;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        left: 0;
+        @include max(992) {
+            width: 100%;
+        }
+    }
+
+
+    .title {
+        font-size: size(45);
+        line-height: 1.2;
+        font-family: auto;
+        font-weight: 300;
+        margin-bottom: 25px;
+
+        @include max(992) {
+            font-size: size(30);
+        }
+    }
+
+    p {
+        font-size: size(18);
+        line-height: 1.66;
+
+        @include max(992) {
+            font-size: size(16);
+        }
+    }
+
+    .left {
+        max-width: 578px;
+    }
+
+    .bg-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.4);
+        }
+
+        &.visible {
+            img {
+                transform: scale(1);
+                transition: 2s cubic-bezier(.165, .84, .44, 1);
+            }
+        }
+    }
+
+    .wraper {
+        padding: 117px 0 146px;
+
+        @include max(992) {
+            padding: 50px 0;
+        }
+    }
+
+    .container {
+        z-index: 1;
+    }
+    .btn{
+       
+        @include min(992) {
+            padding: 16px 40px;
+            font-weight: 400;
+        }
+    }
+
+    .wrapperbox{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 32px;
+        column-gap: 46px;
+        @include max(992) {
+            padding-top: 16px;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+            margin-bottom: 28px;
+            .ttl{
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 1;
+                @include max(992) {
+                    font-size: 16px;
+                }
+            }
+            figure{
+                flex: 0 0 35px;
+            }
+        }
+    }
+
+}
